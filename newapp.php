@@ -1,4 +1,4 @@
-<?php include 'connect.php'; ?>
+<?php include 'connect_php.php'; ?>
 <html>
 <head>
   <title>New Application</title>
