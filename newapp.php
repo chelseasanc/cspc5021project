@@ -5,7 +5,7 @@
 </head>
 <body>
   <h1>New Application</h1>
-  <form method="POST" action="confirm.php">
+  <form method="POST" action="personalinfo.php">
   <label for='stu_type'>Student Type: </label>
 <?php include 'student_type.php'; ?>
   <br />
