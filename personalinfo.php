@@ -14,9 +14,47 @@
     <body>
       <h1>Enter Your Personal Information</h1>
       <form method="POST" action="appinfo.php">
-      <label for='stu_type'>Student Type: </label>
+      <label for='race'>Please mark all that apply: </label>
+      <?php include 'race_info.php'; ?>
       <br />
-      <input type='submit' value='Next' />
+      <label for='military_branch'>Select Military Branch: </label>
+      <?php include 'military_info.php'; ?>
+      <br />
+      <label for='military_status'>Select Military Status: </label>
+      <?php include 'military_status_info.php'; ?>
+      <br />
+      Gender:
+      <label>Male
+         <input type="radio" name="gender" value="male"/>
+      </label>
+      <label>Female
+         <input type="radio" name="gender" value="female"/>
+      </label>
+      <br />
+      Native English English Speaker
+      <label> True
+         <input type="radio" name="isEnglish" value="true"/>
+      </label>
+      <label> False
+         <input type="radio" name="isEnglish" value="false"/>
+      </label>
+      <br />
+      Are you a US citizen?
+      <label> True
+         <input type="radio" name="isUSCitizen" value="true"/>
+      </label>
+      <label> False
+         <input type="radio" name="isUSCitizen" value="false"/>
+      </label>
+      <br />
+      Are you Hispanic/Latino origin?
+      <label> True
+         <input type="radio" name="isHispanic" value="true"/>
+      </label>
+      <label> False
+         <input type="radio" name="isHispanic" value="false"/>
+      </label>
+      <br />
       </form>
     </body>
   <html>
