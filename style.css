@@ -1,0 +1,44 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  width: 80%;
+  margin: 0 auto;
+}
+
+form, div {
+  width: 100%;
+  background-color: #f2f2f2;
+  padding: 40px;
+  border-radius: 5px;
+}
+
+/*form field styling*/
+
+
+
+input[type=text], select {
+  width: 100%;
+  max-width: 800px;
+  height: 40px;
+  border: 1px solid #ccc;
+  margin-top:5px;
+  margin-bottom:5px;
+}
+
+select {
+  box-shadow: 0px 2px 2px 1px #ccc;
+}
+
+input[type=text] {
+  box-shadow: inset 0px 0px 2px 1px #ccc;
+}
+
+/*submit button styling*/
+input[type=submit] {
+  box-shadow: 2px 3px 2px 2px #ccc;
+  background-color: #990000;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  width: 300px;
+  height: 40px;
+}

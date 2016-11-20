@@ -1,4 +1,4 @@
-<?php include 'connect_php.php'; ?>
+
   <html>
     <head>
       <!-- Latest compiled and minified CSS -->
@@ -9,15 +9,39 @@
 
       <!-- Latest compiled and minified JavaScript -->
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+      <!-- Additional styling by Chelsea -->
+      <link rel="stylesheet" href="style.css">
+      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
       <title>Application Info</title>
+
     </head>
     <body>
-      <h1>Enter Your Application Information</h1>
+      <h3>Please provide some more information about your application.</h3>
       <form method="POST" action="confirm.php">
-      <label for='stu_type'>Student Type: </label>
-      <br />
-      <input type='submit' value='Next' />
+        <p>Will you be applying for financial aid? <br>
+        <label><input type="radio" name="financial_aid" value="true"/> Yes </label><br>
+        <label><input type="radio" name="financial_aid" value="false"/> No </label>
+        </p>
+        <p>Do you have employer tuition assistance? <br>
+        <label><input type="radio" name="emp_tuition_asssitance" value="true"/> Yes </label><br>
+        <label><input type="radio" name="emp_tuition_asssitance" value="false"/> No </label>
+        </p>
+        <p>Are you also applying to other programs?<br>
+       <label><input type="radio" name="other_programs" value="true"/> Yes </label><br>
+        <label><input type="radio" name="other_programs" value="false"/> No </label>
+        </p>
+        <p>Have you ever been convicted of a felony or a gross misdemeanor?<br>
+<label><input type="radio" name="felon_misdemean" value="true"/> Yes </label><br>
+        <label><input type="radio" name="felon_misdemean" value="false"/> No </label>
+        <br />
+        A conviction will not necessarily bar admission but will require additional documentation prior to a decision. You will be contacted shortly via email with instructions on reporting the nature of your conviction.</p>
+        <p>Have you ever been placed on probation, suspended from, dismissed from, or otherwise sanctioned by (for any period of time) any higher education institution?<br>
+<label><input type="radio" name="academic_probation" value="true"/> Yes </label><br>
+        <label><input type="radio" name="academic_probation" value="false"/> No </label>
+        </p>
+        <input type='submit' value='Next' />
       </form>
     </body>
   <html>
-<?php include 'disconnect.php'; ?>

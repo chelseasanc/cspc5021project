@@ -9,10 +9,16 @@
 
       <!-- Latest compiled and minified JavaScript -->
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+      <!-- Additional styling by Chelsea -->
+      <link rel="stylesheet" href="style.css">
+      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+
       <title>Personal Info</title>
     </head>
     <body>
-      <h1>Enter Your Personal Information</h1>
+      <h3>Enter Your Personal Information</h3>
       <form method="POST" action="appinfo.php">
       <label for='race'>Please mark all that apply: </label>
       <?php include 'race_info.php'; ?>
