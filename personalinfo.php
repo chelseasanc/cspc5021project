@@ -9,15 +9,12 @@
 
       <!-- Latest compiled and minified JavaScript -->
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<<<<<<< HEAD
 
       <!-- Additional styling by Chelsea -->
       <link rel="stylesheet" href="style.css">
       <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
-=======
       <link rel="stylesheet" href="style.css">
->>>>>>> 74955b2a14b438beb743ede3b76cebaf9d7ba0d3
 
       <title>Personal Info</title>
     </head>
