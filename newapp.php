@@ -17,24 +17,28 @@
     <title>New Application</title>
   </head>
   <body>
-    <h1>New Application</h1>
+    <h3>New Application</h3>
     <form method="POST" action="personalinfo.php">
-      <label for='stu_type'>What type of student are you? </label>
+      <p>
+        What type of student are you? <br>
       <?php include 'student_type.php'; ?>
-      <br />
-
-      <label for='college'>Which college are you applying to? </label>
-      <?php include 'college.php'; ?>
-      <br />
-
-      <label for='degree_type'>What type of degree are you applying for? </label>
-      <?php include 'degree_type.php'; ?>
-      <br />
-      <label for='major'>Please select the major you are applying to. </label>
+      </p>
+      <p>
+        Which college are you applying to? <br>
+        <?php include 'college.php'; ?>
+      </p>
+      <p>
+        What type of degree are you applying for? <br>
+        <?php include 'degree_type.php'; ?>
+      </p>
+      <p>
+        Please select the major you are applying to. <br>
        <?php include 'major.php'; ?>
-      <br />
-      <label for='term'>Please select the term you are applying for</label>
-      <?php include 'term.php'; ?>
+      </p>
+      <p>
+        Please select the term you are applying for. <br>
+        <?php include 'term.php'; ?>
+      </p>
       <br />
       <input type='submit' value='Next' />
     </form>
