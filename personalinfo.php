@@ -21,7 +21,7 @@
     <body>
       <h3>Enter Your Personal Information</h3>
       <form method="POST" action="appinfo.php">
-        <label for='irst-name'>First Name</label>
+        <label for='first-name'>First Name</label>
         <input type="text" name="first-name"/>
         <br />
         <label for='last-name'>Last Name</label>
