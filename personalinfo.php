@@ -21,6 +21,18 @@
     <body>
       <h3>Enter Your Personal Information</h3>
       <form method="POST" action="appinfo.php">
+        <label for='irst-name'>First Name</label>
+        <input type="text" name="first-name"/>
+        <br />
+        <label for='last-name'>Last Name</label>
+        <input type="text" name="last-name"/>
+        <br />
+        <label for='birthday'>Birthday</label>
+        <input type="date" name="birthday"/>
+        <br />
+        <label for='phone'>Phone</label>
+        <input type="phone" name="phone"/>
+        <br />
         <label for='race'>Please mark all that apply: </label>
         <?php include 'race_info.php'; ?>
         <br />
