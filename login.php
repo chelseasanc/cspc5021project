@@ -1,9 +1,5 @@
 <?php
-$confs_array = parse_ini_file("confs.ini", true);
-$servername = $confs_array['servername'];
-$myusername = $confs_array['username'];
-$mypassword = $confs_array['password'];
-$dbname = $confs_array['dbname'];
+include 'connect_php.php';
 
 // Create connection
 $conn = mysqli_connect($servername, $myusername, $mypassword, $dbname);
@@ -34,5 +30,5 @@ if ($count > 0) {
 }
 
 mysqli_stmt_close($sql);
-mysqli_close($conn);
+include 'disconnect.php';
 ?>

@@ -33,8 +33,11 @@
         <label for='birthday'>Date of Birth</label>
         <input type="date" name="birthday" required/>
         <br />
-        <label for='phone'>Preferred Phone</label>
-        <input type="phone" name="phone" required/>
+        <label for='phone'>Preferred Phone Area Code</label>
+        <input type="phone" name="phone-area" required/>
+        <br />
+        <label for='phone'>Preferred Phone Last Seven Digits</label>
+        <input type="phone" name="phone-last-seven" required/>
         <br />
         <div class="form-group"> <!-- Street 1 -->
           <label for="street1_id" class="control-label">Street Address 1</label>
