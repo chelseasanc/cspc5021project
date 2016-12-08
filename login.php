@@ -1,8 +1,6 @@
 <?php
 include 'connect_php.php';
-
-// Create connection
-$conn = mysqli_connect($servername, $myusername, $mypassword, $dbname);
+session_start();
 
 // Check connection
 if (!$conn) {
@@ -11,7 +9,8 @@ if (!$conn) {
 
 $sql = mysqli_prepare($conn, "SELECT EMAIL, PASSWORD FROM LOGIN WHERE EMAIL = ? and PASSWORD = ?");
 
-mysqli_stmt_bind_param($sql, "ss", $_POST['email'], MD5($_POST['password']));
+$email = $_POST['email'];
+mysqli_stmt_bind_param($sql, "ss", $email, MD5($_POST['password']));
 mysqli_stmt_execute($sql);
 mysqli_stmt_bind_result($sql, $col1, $col2);
 
@@ -22,8 +21,7 @@ while (mysqli_stmt_fetch($sql)) {
 }
 
 if ($count > 0) {
-  global $useremail;
-  $useremail = $_POST['email'];
+  $_SESSION['username'] = $email;
   header("Location: /myapps.html");
 } else {
     echo "log in fail!";

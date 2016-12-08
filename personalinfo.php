@@ -1,4 +1,4 @@
-<?php include 'connect_php.php'; ?>
+<?php include 'connect_php.php';?>
   <html>
     <head>
       <!-- Latest compiled and minified CSS -->
@@ -19,6 +19,7 @@
       <title>Personal Info</title>
     </head>
     <body>
+
       <h3>Enter Your Personal Information</h3>
       <form method="POST" action="personalinfo_create.php">
         <label for='first-name'>First Name</label>

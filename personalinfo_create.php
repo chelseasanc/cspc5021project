@@ -1,6 +1,5 @@
 <?php
   include 'connect_php.php';
-
   // Post vars
   // Applicant info
   $firstname = $_POST['first-name'];
@@ -19,12 +18,16 @@
   $country = $_POST['country_id'];
 
   // Other app info
-  $isUSCitizen = $_POST['isUSCitizen'];
-  $isEnglish = $_POST['isEnglish'];
-  $gender = intval($_POST['gender']);
+  $isUSCitizen = $_POST['isUSCitizen'] == 'true';
+  $isEnglish = $_POST['isEnglish'] == 'true';
+  $gender = $_POST['gender'];
   $militaryInfo = $_POST['militaryInfo'];
   $militaryStatus = $_POST['militaryStatus'];
-  $isHispanic = $_POST['isHispanic'];
+  $isHispanic = $_POST['isHispanic'] == 'true';
+
+  session_start();
+  $useremail = $_SESSION['username'];
+  echo $useremail;
 
   function sqlFail() {
     die("Error creating application, please go back and try again");
@@ -41,13 +44,18 @@
   }
   mysqli_stmt_close($addressSQL);
 
-  $genderInsertSQL = mysqli_prepare($conn, "INSERT INTO APPLICANT (EMAIL, ADDRESS_ID, FIRST_NAME, LAST_NAME, PREFERRED_NAME, DOB, PHONE_AREA_CODE, PHONE_LAST_SEVEN, US_CITIZEN, NATIVE_LANGUAGE, GENDER_ID, HISP_LATINO) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);");
+  $applicantInsert = mysqli_prepare($conn, "INSERT INTO APPLICANT (EMAIL, ADDRESS_ID, FIRST_NAME, LAST_NAME, PREFERRED_NAME, DOB, PHONE_AREA_CODE, PHONE_LAST_SEVEN, US_CITIZEN, NATIVE_LANGUAGE, GENDER_ID, HISP_LATINO) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);");
 
-  mysqli_stmt_bind_param($genderInsertSQL, "sissssssssss", $useremail, $createdId, $firstname, $lastname, $preferredname, $birthday, $phoneArea, $phoneSeven, $isUSCitizen, $isEnglish, $gender, $isHispanic);
+  mysqli_stmt_bind_param($applicantInsert, "sissssssssss", $useremail, $createdId, $firstname, $lastname, $preferredname, $birthday, $phoneArea, $phoneSeven, $isUSCitizen, $isEnglish, $gender, $isHispanic);
 
-  mysqli_stmt_close($genderInsertSQL);
 
-  header("Location: /appinfo.php");
+  $applicantCreated = mysqli_stmt_execute($applicantInsert);
+
+  if ($applicantCreated) {
+    header("Location: /appinfo.php");
+  }
+
+  mysqli_stmt_close($applicantInsert);
 
   include 'disconnect.php';
 ?>
