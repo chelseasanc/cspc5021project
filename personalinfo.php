@@ -20,25 +20,25 @@
     </head>
     <body>
       <h3>Enter Your Personal Information</h3>
-      <form method="POST" action="appinfo.php">
+      <form method="POST" action="personalinfo_create.php">
         <label for='first-name'>First Name</label>
-        <input type="text" name="first-name"/>
+        <input type="text" name="first-name" required/>
         <br />
         <label for='last-name'>Last Name</label>
-        <input type="text" name="last-name"/>
+        <input type="text" name="last-name" required/>
         <br />
         <label for='preferred-name'>Preferred Name</label>
         <input type="text" name="preferred-name"/>
         <br />
         <label for='birthday'>Date of Birth</label>
-        <input type="date" name="birthday"/>
+        <input type="date" name="birthday" required/>
         <br />
         <label for='phone'>Preferred Phone</label>
-        <input type="phone" name="phone"/>
+        <input type="phone" name="phone" required/>
         <br />
         <div class="form-group"> <!-- Street 1 -->
           <label for="street1_id" class="control-label">Street Address 1</label>
-          <input type="text" class="form-control" id="street1_id" name="street1" placeholder="Street address, P.O. box, company name, c/o">
+          <input type="text" class="form-control" id="street1_id" name="street1" placeholder="Street address, P.O. box, company name, c/o" required>
         </div>
 
         <div class="form-group"> <!-- Street 2 -->
@@ -48,73 +48,21 @@
 
         <div class="form-group"> <!-- City-->
           <label for="city_id" class="control-label">City</label>
-          <input type="text" class="form-control" id="city_id" name="city" placeholder="Smallville">
+          <input type="text" class="form-control" id="city_id" name="city" placeholder="Smallville" required="">
         </div>
 
         <div class="form-group"> <!-- State Button -->
           <label for="state_id" class="control-label">State</label>
-          <select class="form-control" id="state_id">
-            <option value="AL">Alabama</option>
-            <option value="AK">Alaska</option>
-            <option value="AZ">Arizona</option>
-            <option value="AR">Arkansas</option>
-            <option value="CA">California</option>
-            <option value="CO">Colorado</option>
-            <option value="CT">Connecticut</option>
-            <option value="DE">Delaware</option>
-            <option value="DC">District Of Columbia</option>
-            <option value="FL">Florida</option>
-            <option value="GA">Georgia</option>
-            <option value="HI">Hawaii</option>
-            <option value="ID">Idaho</option>
-            <option value="IL">Illinois</option>
-            <option value="IN">Indiana</option>
-            <option value="IA">Iowa</option>
-            <option value="KS">Kansas</option>
-            <option value="KY">Kentucky</option>
-            <option value="LA">Louisiana</option>
-            <option value="ME">Maine</option>
-            <option value="MD">Maryland</option>
-            <option value="MA">Massachusetts</option>
-            <option value="MI">Michigan</option>
-            <option value="MN">Minnesota</option>
-            <option value="MS">Mississippi</option>
-            <option value="MO">Missouri</option>
-            <option value="MT">Montana</option>
-            <option value="NE">Nebraska</option>
-            <option value="NV">Nevada</option>
-            <option value="NH">New Hampshire</option>
-            <option value="NJ">New Jersey</option>
-            <option value="NM">New Mexico</option>
-            <option value="NY">New York</option>
-            <option value="NC">North Carolina</option>
-            <option value="ND">North Dakota</option>
-            <option value="OH">Ohio</option>
-            <option value="OK">Oklahoma</option>
-            <option value="OR">Oregon</option>
-            <option value="PA">Pennsylvania</option>
-            <option value="RI">Rhode Island</option>
-            <option value="SC">South Carolina</option>
-            <option value="SD">South Dakota</option>
-            <option value="TN">Tennessee</option>
-            <option value="TX">Texas</option>
-            <option value="UT">Utah</option>
-            <option value="VT">Vermont</option>
-            <option value="VA">Virginia</option>
-            <option value="WA">Washington</option>
-            <option value="WV">West Virginia</option>
-            <option value="WI">Wisconsin</option>
-            <option value="WY">Wyoming</option>
-          </select>
+            <?php include 'state_info.php'; ?>
         </div>
 
         <div class="form-group"> <!-- Zip Code-->
           <label for="zip_id" class="control-label">Zip Code</label>
-          <input type="text" class="form-control" id="zip_id" name="zip" placeholder="#####">
+          <input type="text" class="form-control" id="zip_id" name="zip" placeholder="#####" required>
         </div>
         <div class="form-group"> <!-- Zip Code-->
           <label for="country_id" class="control-label">Country</label>
-          <input type="text" class="form-control" id="country_id" name="country" placeholder="##">
+          <?php include 'country_info.php'; ?>
         </div>
         Are you a US citizen?
         <label> True
