@@ -3,7 +3,7 @@
   $result = mysqli_query($conn, $sql);
 
   if (mysqli_num_rows($result) > 0) {
-    echo "<select name='militaryInfo' id='military_branch'>\n";
+    echo "<select name='militaryBranchInfo' id='military_branch'>\n";
   while($row = mysqli_fetch_row($result)) {
     echo "<option value='" . $row[0] . "'>" . $row[1] . "</option>\n";
   }

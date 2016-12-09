@@ -22,9 +22,10 @@ while (mysqli_stmt_fetch($sql)) {
 
 if ($count > 0) {
   $_SESSION['username'] = $email;
-  header("Location: /myapps.html");
+  header("Location: /myapps.php");
 } else {
     echo "log in fail!";
+    echo "<a href='create_account.html'>Create New Account</a>";
 }
 
 mysqli_stmt_close($sql);
