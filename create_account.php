@@ -33,7 +33,7 @@ if ($confirmedPwd != $pwd) {
   if ($count > 0) {
     session_start();
     $_SESSION['username'] = $_POST['email'];
-    header("Location: /myapps.html");
+    header("Location: /myapps.php");
   } else {
     echo "Fail! Account not created.";
   }
