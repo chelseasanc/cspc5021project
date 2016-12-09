@@ -28,7 +28,6 @@
 
   session_start();
   $useremail = $_SESSION['username'];
-  echo $useremail;
 
   function sqlFail() {
     die("Error creating application, please go back and try again");
@@ -43,6 +42,7 @@
   if (!$addressCreated) {
     sqlFail();
   }
+
   mysqli_stmt_close($addressSQL);
 
   include 'disconnect.php';
@@ -91,8 +91,7 @@
   mysqli_stmt_close($militaryStatusInsert);
 
   if ($applicantCreated) {
-    echo $raceInfo;
-    // header("Location: /appinfo.php");
+    header("Location: /appinfo.php");
   }
 
   include 'disconnect.php';
