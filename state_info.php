@@ -3,7 +3,7 @@
   $result = mysqli_query($conn, $sql);
 
   if (mysqli_num_rows($result) > 0) {
-    echo "<select class='form-control' id='state_id'>\n";
+    echo "<select class='form-control' name='state_id' id='state_id'>\n";
   while($row = mysqli_fetch_row($result)) {
     echo "<option value='" . $row[0] . "'>" . $row[1] . "</option>\n";
   }
