@@ -1,4 +1,6 @@
 <?php
-mysqli_free_result($result);
+if ($result) {
+  mysqli_free_result($result);
+}
 mysqli_close($conn);
 ?>
