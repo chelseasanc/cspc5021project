@@ -74,22 +74,22 @@
           Are you a US citizen?<br>
           <label>
              <input type="radio" name="isUSCitizen" value="Yes"/>
-             True
+             Yes
           </label><br>
           <label>
             <input type="radio" name="isUSCitizen" value="Yes"/>
-            False
+            No
           </label>
         </p>
         <p>
           Are you a native English speaker?<br>
           <label>
             <input type="radio" name="isEnglish" value="Yes"/>
-            True
+            Yes
           </label><br>
           <label>
              <input type="radio" name="isEnglish" value="No"/>
-             False
+             No
           </label>
         </p>
         <p>
@@ -119,11 +119,11 @@
         Are you Hispanic/Latino?<br>
         <label>
            <input type="radio" name="isHispanic" value="Yes"/>
-           True
+           Yes
         </label><br>
         <label>
            <input type="radio" name="isHispanic" value="No"/>
-           False
+           No
         </label>
         </p>
         <br />
