@@ -1,6 +1,7 @@
 body {
   font-family: 'Roboto', sans-serif;
-  padding: 10%;
+  padding-right: 10%;
+  padding-left: 10%;
 }
 
 div {
@@ -51,7 +52,7 @@ td {
 /*form field styling*/
 
 
-input[type=text], input[type=phone], input[type=date], select {
+input[type=text], input[type=phone], input[type=date], input[type=password], select {
   width: 100%;
   max-width: 800px;
   height: 40px;
