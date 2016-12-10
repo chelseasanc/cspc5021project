@@ -30,8 +30,6 @@
 
   $applicant_id = $arr[0];
 
-  echo $applicant_id, $student_type, $college, $major, $term, $financial_aid, $emp_tuition_assitance, $other_programs, $felon_misdemean, $academic_probation;
-
   function sqlFail() {
     die("Error creating application, please go back and try again");
   }
