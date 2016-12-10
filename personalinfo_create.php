@@ -18,13 +18,13 @@
   $country = $_POST['country_id'];
 
   // Other app info
-  $isUSCitizen = $_POST['isUSCitizen'] == 'true';
-  $isEnglish = $_POST['isEnglish'] == 'true';
+  $isUSCitizen = $_POST['isUSCitizen'];
+  $isEnglish = $_POST['isEnglish'];
   $raceInfo = $_POST['race'];
-  $gender = $_POST['gender'] == 'female';
+  $gender = $_POST['gender'];
   $militaryBranchInfo = $_POST['militaryBranchInfo'];
   $militaryStatus = $_POST['militaryStatus'];
-  $isHispanic = $_POST['isHispanic'] == 'true';
+  $isHispanic = $_POST['isHispanic'];
 
   session_start();
   $useremail = $_SESSION['username'];

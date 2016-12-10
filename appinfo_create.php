@@ -38,7 +38,7 @@
 
   $sql= mysqli_prepare($conn, "INSERT INTO APPLICATION(APPLICANT_ID,MAJOR_ID,STUDENT_TYPE_ID,ACADEMIC_PROBATION,DEGREE_TYPE_ID,TERM_ID,FINANCIAL_AID,EMP_TUITION_ASSISTANCE,OTHER_PROGRAMS,FELON_MISDEMEAN) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);");
 
-  mysqli_stmt_bind_param($sql, "iiiiiiiiii", $applicant_id, $major, $student_type, $academic_probation, $degree_type, $term, $financial_aid, $emp_tuition_assistance, $other_programs, $felon_misdemean);
+  mysqli_stmt_bind_param($sql, "iiiiiissss", $applicant_id, $major, $student_type, $academic_probation, $degree_type, $term, $financial_aid, $emp_tuition_assistance, $other_programs, $felon_misdemean);
 
   $result = mysqli_stmt_execute($sql);
 

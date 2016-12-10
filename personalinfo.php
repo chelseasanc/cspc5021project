@@ -95,11 +95,11 @@
         <p>
           Gender: <br>
           <label>
-             <input type="radio" name="gender" value="male"/>
+             <input type="radio" name="gender" value="Male"/>
              Male
           </label><br>
           <label>
-             <input type="radio" name="gender" value="female"/>
+             <input type="radio" name="gender" value="Female"/>
              Female
           </label>
         </p>
