@@ -13,7 +13,18 @@ form, div {
 
 /*form field styling*/
 
+table, th, td {
+  border: solid black 1px;
+}
 
+table {
+  border-color: #000;
+  border-width: 1px;
+  border-style: solid;
+  /* or, of course,
+  border: 1px solid #000;
+  */
+}
 
 input[type=text], select {
   width: 100%;
