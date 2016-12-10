@@ -23,41 +23,41 @@
         <form method="POST" action="appinfo_create.php">
           <p>Will you be applying for financial aid? <br>
             <label>
-              <input type="radio" name="financial_aid" value="true" required/> Yes
+              <input type="radio" name="financial_aid" value="Yes" required/> Yes
             </label><br>
             <label>
-              <input type="radio" name="financial_aid" value="false"/> No
+              <input type="radio" name="financial_aid" value="No"/> No
             </label>
           </p>
           <p>Do you have employer tuition assistance?<br>
             <label>
-              <input type="radio" name="emp_tuition_assistance" value="true" required/>
+              <input type="radio" name="emp_tuition_assistance" value="Yes" required/>
                Yes
             </label><br>
             <label>
-              <input type="radio" name="emp_tuition_assistance" value="false"/> No
+              <input type="radio" name="emp_tuition_assistance" value="No"/> No
             </label>
           </p>
           <p>
             Are you also applying to other programs?<br>
             <label>
-              <input type="radio" name="other_programs" value="true" required/> Yes
+              <input type="radio" name="other_programs" value="Yes" required/> Yes
             </label><br>
             <label>
-              <input type="radio" name="other_programs" value="false"/> No
+              <input type="radio" name="other_programs" value="No"/> No
             </label>
           </p>
           <p>
             Have you ever been convicted of a felony or a gross misdemeanor?<br>
-            <label><input type="radio" name="felon_misdemean" value="true" required/> Yes </label><br>
-            <label><input type="radio" name="felon_misdemean" value="false"/> No </label>
+            <label><input type="radio" name="felon_misdemean" value="Yes" required/> Yes </label><br>
+            <label><input type="radio" name="felon_misdemean" value="No"/> No </label>
             <br />
             A conviction will not necessarily bar admission but will require additional documentation prior to a decision. You will be contacted shortly via email with instructions on reporting the nature of your conviction.
           </p>
           <p>
             Have you ever been placed on probation, suspended from, dismissed from, or otherwise sanctioned by (for any period of time) any higher education institution?<br>
-            <label><input type="radio" name="academic_probation" value="true" required/> Yes </label><br>
-            <label><input type="radio" name="academic_probation" value="false"/> No </label>
+            <label><input type="radio" name="academic_probation" value="Yes" required/> Yes </label><br>
+            <label><input type="radio" name="academic_probation" value="No"/> No </label>
           </p>
           <input type='submit' value='Next' />
         </form>
