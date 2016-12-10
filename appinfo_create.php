@@ -28,7 +28,13 @@
 
   $arr = mysqli_fetch_array($row);
 
+  if (!$arr) {
+    echo "no results";
+  }
+
   $applicant_id = $arr[0];
+
+  echo $applicant_id;
 
   function sqlFail() {
     die("Error creating application, please go back and try again");
