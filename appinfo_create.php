@@ -3,11 +3,11 @@
 
   // Post vars
   // All the app info
-  $financial_aid = $_POST['financial_aid'] == 'true';
-  $emp_tuition_assistance = $_POST['emp_tuition_assistance'] == 'true';
-  $other_programs = $_POST['other_programs'] == 'true' ;
-  $felon_misdemean = $_POST['felon_misdemean'] == 'true';
-  $academic_probation = $_POST['academic_probation'] == 'true';
+  $financial_aid = $_POST['financial_aid'];
+  $emp_tuition_assistance = $_POST['emp_tuition_assistance'];
+  $other_programs = $_POST['other_programs'];
+  $felon_misdemean = $_POST['felon_misdemean'];
+  $academic_probation = $_POST['academic_probation'];
 
 
   session_start();

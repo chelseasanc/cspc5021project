@@ -73,22 +73,22 @@
         <p>
           Are you a US citizen?<br>
           <label>
-             <input type="radio" name="isUSCitizen" value="true"/>
+             <input type="radio" name="isUSCitizen" value="Yes"/>
              True
           </label><br>
           <label>
-            <input type="radio" name="isUSCitizen" value="false"/>
+            <input type="radio" name="isUSCitizen" value="Yes"/>
             False
           </label>
         </p>
         <p>
           Are you a native English speaker?<br>
           <label>
-            <input type="radio" name="isEnglish" value="true"/>
+            <input type="radio" name="isEnglish" value="Yes"/>
             True
           </label><br>
           <label>
-             <input type="radio" name="isEnglish" value="false"/>
+             <input type="radio" name="isEnglish" value="No"/>
              False
           </label>
         </p>
@@ -118,11 +118,11 @@
         <p>
         Are you Hispanic/Latino?<br>
         <label>
-           <input type="radio" name="isHispanic" value="true"/>
+           <input type="radio" name="isHispanic" value="Yes"/>
            True
         </label><br>
         <label>
-           <input type="radio" name="isHispanic" value="false"/>
+           <input type="radio" name="isHispanic" value="No"/>
            False
         </label>
         </p>
