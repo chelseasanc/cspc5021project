@@ -20,7 +20,7 @@
       <h4> Here are your current applications: </h4>
       <div>
         <?php include 'apps_table.php';?>
-        <a href="/personalinfo.php"><button>Create new app</button></a>
+        <a href="./newapp.php"><button>Create new app</button></a>
       </div>
    </body>
 </html>
