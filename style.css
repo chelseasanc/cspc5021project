@@ -1,7 +1,6 @@
 body {
   font-family: 'Roboto', sans-serif;
-  width: 80%;
-  margin: 0 auto;
+  padding: 10%;
 }
 
 form, div {
@@ -26,7 +25,7 @@ table {
   */
 }
 
-input[type=text], select {
+input, select {
   width: 100%;
   max-width: 800px;
   height: 40px;
@@ -44,7 +43,7 @@ input[type=text] {
 }
 
 /*submit button styling*/
-input[type=submit] {
+input[type=submit], button {
   box-shadow: 2px 3px 2px 2px #ccc;
   background-color: #990000;
   color: white;
