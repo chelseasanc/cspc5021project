@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
-    <title>New Application</title>
+    <title>Your Applications</title>
   </head>
    <body>
       <h3>Welcome <?php session_start(); $useremail = $_SESSION['username']; echo $useremail; ?> </h3>
