@@ -9,7 +9,7 @@
   $results = mysqli_stmt_execute($sql);
   mysqli_stmt_bind_result($sql, $appId, $majorId, $studentType, $degreeType, $termQtr, $termYr);
 
-  if (mysqli_num_rows) {
+  if (mysqli_num_rows($results)) {
     echo "<table>\n";
           while ($row = mysqli_stmt_fetch_rows($sql)) {
           echo "<tr>\n";

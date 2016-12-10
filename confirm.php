@@ -16,13 +16,13 @@
     <title>Confirm application</title>
   </head>
    <body>
-      <h3>Please review and confirm your application.</h3>
+      <?php session_start(); echo "<h3>Please review and confirm your application " .   $_SESSION['username'] . ".</h3>" ?>
       <div>
         <h4>Appplication</h4>
-        <?php include 'newapp_table.php';?>
+        <?php include 'apps_table.php';?>
         <br>
         <h4>Personal Info</h4>
-        <?php include 'newapp_table.php';?>
+        <?php include 'show_personal_info.php';?>
         <br>
         <h4>Application Details</h4>
         <?php include 'newapp_table.php';?>

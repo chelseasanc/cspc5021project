@@ -20,7 +20,7 @@
       echo "<tbody>\n";
         while (mysqli_stmt_fetch($sql)) {
           echo "<tr>\n";
-          echo "<td>" . $appId . "</td>\n";
+          echo "<td><a href='/confirm.php?appid=" . $appId . "'>" . $appId . "</a></td>\n";
           echo "<td>" . $majorId . "</td>\n";
           echo "<td>" . $studentType . "</td>\n";
           echo "<td>" . $degreeType . "</td>\n";
