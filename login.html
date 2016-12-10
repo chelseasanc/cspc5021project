@@ -1,28 +1,36 @@
 <html>
+  <head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- Additional styling by Chelsea -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <title>Log in</title>
+  </head>
   <body>
-    Welcome to awesome college, please login!.
-    <form action="login.php" method="post">
-    <table>
-      <tr>
-      <td>
-      user name:
-      </td>
-      <td><input type="text" name="email"><br></td>
-      </tr>
-      <tr>
-      <td>
-      password:
-      </td>
-      <td><input type="password" name="password"><br></td>
-      </tr>
-      <tr>
-      <td>
-      </td>
-      <td>
+    <h3> Welcome to Awesome College, home of the Fighting Geoducks!</h3>
+    <h4> Please log in, or create a new account.</h4>
+    <div>
+      <form action="login.php" method="post">
+      <p>
+        User name:<br>
+        <input type="text" name="email">
+      </p>
+      <p>
+        Password: <br>
+        <input type="password" name="password">
+      </p>
       <input type="submit" value="Login">
-      </td>
-      </tr>
-    </form>
-    <a href="create_account.html">Create New Account</a>
+      </form>
+      <a href="create_account.html"><button>Create New Account</button></a>
+    </div>
   </body>
 </html>

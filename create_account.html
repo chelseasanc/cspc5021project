@@ -1,28 +1,38 @@
 <html>
+  <head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- Additional styling by Chelsea -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <title>Create Account</title>
+  </head>
   <body>
-    Please sign up for Awesome College. Home of the awesome, valuable BA in English.
-    <form action="create_account.php" method="post">
-    <table>
-      <tr>
-        <td>
-          user name:
-        </td>
-        <td><input type="text" name="email"><br></td>
-      </tr>
-      <tr>
-        <td>
-          password:
-        </td>
-        <td><input type="password" name="password"><br></td>
-      </tr>
-      <tr>
-        <td>
-          re-enter password:
-        </td>
-        <td><input type="password" name="confirmed-password"><br></td>
-      </tr>
-    </table>
-    <input type="submit" value="Join Us! Or else">
-    </form>
+    <h3> Create a new account </h3>
+    <div>
+      <form action="create_account.php" method="post">
+      <p>
+         Email (this will be your username): <br>
+          <input type="text" name="email">
+      </p>
+      <p>
+        Password: <br>
+        <input type="password" name="password">
+      </p>
+      <p>
+        Re-enter password: <br>
+        <input type="password" name="confirmed-password"><br></td>
+      </p>
+      <input type="submit" value="Create Account">
+      </form>
+    </div>
   </body>
 </html>
