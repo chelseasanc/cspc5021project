@@ -245,7 +245,8 @@ INSERT INTO MIL_BRANCH_TYPE VALUES
   (1, 'Marine Corp'),
   (2, 'Navy'),
   (3, 'Air Force'),
-  (4, 'Coast Gaurd');
+  (4, 'Coast Gaurd'),
+  (5, 'Not a veteran');
 
 INSERT INTO MIL_STATUS_TYPE VALUES
   (0, 'Not a veteran'),
