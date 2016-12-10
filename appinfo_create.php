@@ -1,7 +1,6 @@
 <?php
   include 'connect_php.php';
 
-
   // Post vars
   // All the app info
   $financial_aid = $_POST['financial_aid'];
@@ -14,6 +13,7 @@
   session_start();
   $useremail = $_SESSION['username'];
 
+
   //All the session variables stored from the "newapp" page
   $student_type = $_SESSION['student_type'];
   $college = $_SESSION['college'];
@@ -23,16 +23,23 @@
 
 
   //get applicant ID from the applicant table based off the username
-  $applicant_id = mysqli_query($conn, "SELECT APPLICANT_ID FROM APPLICANT WHERE EMAIL=`".$useremail."`;");
 
+  $row = mysqli_query($conn, "SELECT APPLICANT_ID FROM APPLICANT WHERE EMAIL='".$useremail."';");
+
+  $arr = mysqli_fetch_array($row);
+
+  $applicant_id = $arr[0];
+
+  echo $applicant_id, $student_type, $college, $major, $term, $financial_aid, $emp_tuition_assitance, $other_programs, $felon_misdemean, $academic_probation;
 
   function sqlFail() {
     die("Error creating application, please go back and try again");
   }
 
-  $sql = mysqli_prepare($conn, "INSERT INTO APPLICATION VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);");
+  $sql= mysqli_prepare($conn, "INSERT INTO APPLICATION VALUES (NULL, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);");
 
   mysqli_stmt_bind_param($sql, "iiiiiiiiii", $applicant_id, $major, $student_type, $academic_probation, $degree_type, $term, $financial_aid, $emp_tuition_assitance, $other_programs, $felon_misdemean);
+
   $result = mysqli_stmt_execute($sql);
 
   if (!$result) {
@@ -41,7 +48,7 @@
 
   mysqli_stmt_close($sql);
 
-  header("Location: /confirm.php");
+  header("Location: ./confirm.php");
 
   include 'disconnect.php';
 ?>

@@ -19,7 +19,7 @@
   <body>
     <h3>New Application</h3>
     <div>
-    <form method="POST" action="personalinfo.php">
+    <form method="POST" action="newapp_create.php">
       <p>
         What type of student are you? <br>
       <?php include 'student_type.php'; ?>

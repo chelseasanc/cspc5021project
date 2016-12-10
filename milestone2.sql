@@ -138,7 +138,7 @@ CREATE TABLE MAJOR(
   MAJOR_ID INT NOT NULL PRIMARY KEY,
   COLLEGE_ID INT NOT NULL,
   FOREIGN KEY ( COLLEGE_ID ) REFERENCES COLLEGE ( COLLEGE_ID ) ON UPDATE CASCADE,
-  MAJOR_NAME VARCHAR ( 32 ) NOT NULL
+  MAJOR_NAME VARCHAR ( 100 ) NOT NULL
 ) ENGINE=InnoDB;
 
 CREATE TABLE DEGREE_TYPE(
@@ -242,7 +242,7 @@ INSERT INTO TEST_TYPE VALUES
 
 INSERT INTO MIL_BRANCH_TYPE VALUES
   (0, 'Army'),
-  (1, 'Marin Corp'),
+  (1, 'Marine Corp'),
   (2, 'Navy'),
   (3, 'Air Force'),
   (4, 'Coast Gaurd');
@@ -254,7 +254,7 @@ INSERT INTO MIL_STATUS_TYPE VALUES
   (3, 'Current dependent');
 
 INSERT INTO COLLEGE VALUES
-    (0, 'College of Sciente and Engineering'),
+    (0, 'College of Science and Engineering'),
     (1, 'Albers School of Business'),
     (2, 'College of Arts and Sciences'),
     (3, 'College of Education'),
@@ -262,13 +262,13 @@ INSERT INTO COLLEGE VALUES
     (5, 'School of Theology and Ministry');
 
 INSERT INTO MAJOR VALUES
-    (0,'Certificate in Computer Science Fundamentals',1),
-    (1,'Certificate in Software Architecture and Design',1),
-    (2,'Certificate in Software Project Management',1);
+    (0,0,'Certificate in Computer Science Fundamentals'),
+    (1,0,'Certificate in Software Architecture and Design'),
+    (2,0,'Certificate in Software Project Management');
 
 INSERT INTO DEGREE_TYPE VALUES
-    (0,'Certificates'),
-    (1,'Masters');
+    (0,'Certificate'),
+    (1,'Master');
 
 INSERT INTO STUDENT_TYPE VALUES
     (0,'Graduate'),

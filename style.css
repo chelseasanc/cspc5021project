@@ -10,20 +10,46 @@ div {
   border-radius: 5px;
 }
 
-/*form field styling*/
-
+/*table stying*/
 table, th, td {
   border: solid black 1px;
 }
 
 table {
-  border-color: #000;
+  /*border-color: #000;
   border-width: 1px;
   border-style: solid;
-  /* or, of course,
+  or, of course,
   border: 1px solid #000;
   */
+  background-color: white;
+  width: 100%;
+  margin-bottom: 20px;
+  border: none;
 }
+
+tr {
+  heigh: 30px;
+}
+
+thead {
+  background-color: #990000;
+  color: white;
+}
+
+
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+td {
+  padding: 5px;
+  border: none;
+}
+
+
+/*form field styling*/
+
 
 input[type=text], input[type=phone], input[type=date], select {
   width: 100%;

@@ -55,10 +55,13 @@
   $applicantCreated = mysqli_stmt_execute($applicantInsert);
   $createdId = mysqli_insert_id($conn);
 
-  mysqli_stmt_close($applicantInsert);
-  if (!$addressCreated) {
+
+  if (!$applicantCreated) {
     sqlFail();
   }
+
+
+  mysqli_stmt_close($applicantInsert);
 
   include 'disconnect.php';
   include 'connect_php.php';
@@ -68,6 +71,7 @@
 
     mysqli_stmt_bind_param($raceInsert, "ii", $createdId, $race);
     $raceCreated = mysqli_stmt_execute($raceInsert);
+
 
     if (!$raceCreated) {
       sqlFail();
@@ -91,7 +95,7 @@
   mysqli_stmt_close($militaryStatusInsert);
 
   if ($applicantCreated) {
-    header("Location: /appinfo.php");
+    header("Location: ./appinfo.php");
   }
 
   include 'disconnect.php';

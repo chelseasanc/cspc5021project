@@ -20,7 +20,7 @@
     <body>
       <h3>Please provide some more information about your application.</h3>
       <div>
-        <form method="POST" action="confirm.php">
+        <form method="POST" action="appinfo_create.php">
           <p>Will you be applying for financial aid? <br>
             <label>
               <input type="radio" name="financial_aid" value="true"/> Yes
