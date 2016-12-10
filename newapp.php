@@ -18,6 +18,7 @@
   </head>
   <body>
     <h3>New Application</h3>
+    <div>
     <form method="POST" action="personalinfo.php">
       <p>
         What type of student are you? <br>
@@ -42,6 +43,7 @@
       <br />
       <input type='submit' value='Next' />
     </form>
+    </div>
   </body>
 <html>
 <?php include 'disconnect.php'; ?>

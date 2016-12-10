@@ -19,98 +19,117 @@
       <title>Personal Info</title>
     </head>
     <body>
-
-      <h3>Enter Your Personal Information</h3>
+      <h3>Enter your personal information.</h3>
+      <div class ="page-body">
       <form method="POST" action="personalinfo_create.php">
-        <label for='first-name'>First Name</label>
-        <input type="text" name="first-name" required/>
-        <br />
-        <label for='last-name'>Last Name</label>
-        <input type="text" name="last-name" required/>
-        <br />
-        <label for='preferred-name'>Preferred Name</label>
-        <input type="text" name="preferred-name"/>
-        <br />
-        <label for='birthday'>Date of Birth</label>
-        <input type="date" name="birthday" required/>
-        <br />
-        <label for='phone'>Preferred Phone Area Code</label>
-        <input type="phone" name="phone-area" required/>
-        <br />
-        <label for='phone'>Preferred Phone Last Seven Digits</label>
-        <input type="phone" name="phone-last-seven" required/>
-        <br />
-        <div class="form-group"> <!-- Street 1 -->
-          <label for="street1_id" class="control-label">Street Address 1</label>
-          <input type="text" class="form-control" id="street1_id" name="street1" placeholder="Street address, P.O. box, company name, c/o" required>
-        </div>
-
-        <div class="form-group"> <!-- Street 2 -->
-          <label for="street2_id" class="control-label">Street Address 2</label>
-          <input type="text" class="form-control" id="street2_id" name="street2" placeholder="Apartment, suite, unit, building, floor, etc.">
-        </div>
-
-        <div class="form-group"> <!-- City-->
-          <label for="city_id" class="control-label">City</label>
-          <input type="text" class="form-control" id="city_id" name="city" placeholder="Smallville" required="">
-        </div>
-
-        <div class="form-group"> <!-- State Button -->
-          <label for="state_id" class="control-label">State</label>
-            <?php include 'state_info.php'; ?>
-        </div>
-
-        <div class="form-group"> <!-- Zip Code-->
-          <label for="zip_id" class="control-label">Zip Code</label>
-          <input type="text" class="form-control" id="zip_id" name="zip" placeholder="#####" required>
-        </div>
-        <div class="form-group"> <!-- Zip Code-->
-          <label for="country_id" class="control-label">Country</label>
+        <p>
+          <label for='first-name'>First Name:</label><br>
+          <input type="text" name="first-name" required/>
+        </p>
+        <p>
+          <label for='last-name'>Last Name:</label><br>
+          <input type="text" name="last-name" required/>
+        </p>
+        <p>
+          <label for='preferred-name'>Preferred Name:</label><br>
+          <input type="text" name="preferred-name"/>
+        </p>
+        <p>
+          <label for='birthday'>Date of Birth:</label><br>
+          <input type="date" name="birthday" required/>
+        </p>
+        <p>
+          <label for='phone'>Preferred Phone Area Code:</label><br>
+          <input type="phone" name="phone-area" required/>
+        </p>
+        <p>
+          <label for='phone'>Preferred Phone Last Seven Digits:</label><br>
+          <input type="phone" name="phone-last-seven" required/>
+        </p>
+        <p>
+          <label for="street1_id">Street Address 1:</label><br>
+          <input type="text" id="street1_id" name="street1" placeholder="Street address, P.O. box, company name, c/o" required>
+        </p>
+        <p>
+          <label for="street2_id">Street Address 2:</label><br>
+          <input type="text" id="street2_id" name="street2" placeholder="Apartment, suite, unit, building, floor, etc.">
+        </p>
+        <p>
+          <label for="city_id">City:</label><br>
+          <input type="text" id="city_id" name="city" placeholder="Smallville" required="">
+        </p>
+        <p>
+          <label for="state_id">State:</label><br>
+          <?php include 'state_info.php'; ?>
+        </p>
+        <p>
+          <label for="zip_id">Zip Code:</label><br>
+          <input type="text" id="zip_id" name="zip" placeholder="#####" required>
+        </p>
+        <p>
+          <label for="country_id">Country:</label><br>
           <?php include 'country_info.php'; ?>
-        </div>
-        Are you a US citizen?
-        <label> True
-           <input type="radio" name="isUSCitizen" value="true"/>
-        </label>
-        <label> False
-           <input type="radio" name="isUSCitizen" value="false"/>
-        </label>
-        <br />
-        Native English English Speaker
-        <label> True
-           <input type="radio" name="isEnglish" value="true"/>
-        </label>
-        <label> False
-           <input type="radio" name="isEnglish" value="false"/>
-        </label>
-        <br />
-        Gender:
-        <label>Male
-           <input type="radio" name="gender" value="male"/>
-        </label>
-        <label>Female
-           <input type="radio" name="gender" value="female"/>
-        </label>
-        <br />
-        <label for='military_branch'>Select Military Branch: </label>
-        <?php include 'military_info.php'; ?>
-        <br />
-        <label for='military_status'>Select Military Status: </label>
-        <?php include 'military_status_info.php'; ?>
-        <br />
-        <label for='race'>Please mark all that apply: </label>
-        <?php include 'race_info.php'; ?>
-        <br />
-        Are you Hispanic/Latino origin?
-        <label> True
+        </p>
+        <p>
+          Are you a US citizen?<br>
+          <label>
+             <input type="radio" name="isUSCitizen" value="true"/>
+             True
+          </label><br>
+          <label>
+            <input type="radio" name="isUSCitizen" value="false"/>
+            False
+          </label>
+        </p>
+        <p>
+          Are you a native English speaker?<br>
+          <label>
+            <input type="radio" name="isEnglish" value="true"/>
+            True
+          </label><br>
+          <label>
+             <input type="radio" name="isEnglish" value="false"/>
+             False
+          </label>
+        </p>
+        <p>
+          Gender: <br>
+          <label>
+             <input type="radio" name="gender" value="male"/>
+             Male
+          </label><br>
+          <label>
+             <input type="radio" name="gender" value="female"/>
+             Female
+          </label>
+        </p>
+        <p>
+          <label for='military_branch'>Select Military Branch: </label><br>
+          <?php include 'military_info.php'; ?>
+        </p>
+        <p>
+          <label for='military_status'>Select Military Status: </label><br>
+          <?php include 'military_status_info.php'; ?>
+        </p>
+        <p>
+          <label for='race'>Please mark all that apply: </label><br>
+          <?php include 'race_info.php'; ?>
+        </p>
+        <p>
+        Are you Hispanic/Latino?<br>
+        <label>
            <input type="radio" name="isHispanic" value="true"/>
-        </label>
-        <label> False
+           True
+        </label><br>
+        <label>
            <input type="radio" name="isHispanic" value="false"/>
+           False
         </label>
+        </p>
         <br />
         <input type='submit' value='Next' />
       </form>
+      </div>
     </body>
   <html>
 <?php include 'disconnect.php'; ?>

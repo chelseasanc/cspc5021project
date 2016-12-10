@@ -4,7 +4,7 @@
 
   if (mysqli_num_rows($result) > 0) {
   while($row = mysqli_fetch_row($result)) {
-    echo "<input name=\"race[]\" type=\"checkbox\" value=" . $row[0] . "'>" . $row[1] . "</input>\n";
+    echo "<input name=\"race[]\" type=\"checkbox\" value=" . $row[0] . "'>  " . $row[1] . "</input><br>\n";
   }
   } else {
     echo "0 results";

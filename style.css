@@ -3,7 +3,7 @@ body {
   padding: 10%;
 }
 
-form, div {
+div {
   width: 100%;
   background-color: #f2f2f2;
   padding: 40px;
@@ -25,21 +25,22 @@ table {
   */
 }
 
-input, select {
+input[type=text], input[type=phone], input[type=date], select {
   width: 100%;
   max-width: 800px;
   height: 40px;
   border: 1px solid #ccc;
-  margin-top:5px;
-  margin-bottom:5px;
+  padding: 10px;
 }
 
 select {
   box-shadow: 0px 2px 2px 1px #ccc;
+  background-color: white;
 }
 
-input[type=text] {
-  box-shadow: inset 0px 0px 2px 1px #ccc;
+p {
+  margin-bottom: 20px;
+  line-height: 1.5;
 }
 
 /*submit button styling*/
