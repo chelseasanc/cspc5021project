@@ -6,12 +6,12 @@
 
   $stmt = mysqli_prepare($conn, "SELECT STUDENT_TYPE_NAME, COLLEGE_NAME, DEGREE_TYPE_NAME, MAJOR_NAME, QUARTER, YEAR FROM APPLICATION A, STUDENT_TYPE S, MAJOR M, COLLEGE C, DEGREE_TYPE D, TERM T WHERE A.STUDENT_TYPE_ID = S.STUDENT_TYPE_ID AND M.MAJOR_ID = A.MAJOR_ID AND C.COLLEGE_ID = M.COLLEGE_ID AND D.DEGREE_TYPE_ID = A.DEGREE_TYPE_ID AND T.TERM_ID = A.TERM_ID AND A.APP_ID = ? ");
   mysqli_stmt_bind_param($stmt, 'i', $_SESSION['application_id']);
-  $result = mysqli_stmt_execute($stmt);
+  $results = mysqli_stmt_execute($stmt);
   mysqli_stmt_bind_result($stmt,$studentType,$collegeName,$degreeType,$majorName,$quarter,$year);
   mysqli_stmt_fetch($stmt);
   mysqli_stmt_close($stmt);
 
-  if ($result) {
+  if ($results) {
       echo "<table class='confirm'>\n";
       echo "<thead> <td colspan='2'> Application </td> </thead>\n";
       echo "<tr>\n";
