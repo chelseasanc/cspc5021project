@@ -16,7 +16,7 @@
         echo "<td>Degree</td>\n";
         echo "<td>Major</td>\n";
         echo "<td>Term</td>\n";
-      echo "<thead>\n";
+      echo "</thead>\n";
       echo "<tbody>\n";
         while (mysqli_stmt_fetch($sql)) {
           echo "<tr>\n";

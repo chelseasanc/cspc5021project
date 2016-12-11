@@ -56,7 +56,7 @@
     include 'disconnect.php';
     include 'connect_php.php';
 
-    $applicantInsert = mysqli_prepare($conn, "UPDATE APPLICANT SET ADDRESS_ID=?, FIRST_NAME=?, LAST_NAME=?, PREFERRED_NAME=?, DOB=?, PHONE_AREA_CODE=?, PHONE_LAST_SEVEN=?, US_CITIZEN=?, NATIVE_LANGUAGE=?, GENDER_ID=?, HISP_LATINO=? WHERE APPLICANT_ID= " . $existingId . ";");
+    $applicantInsert = mysqli_prepare($conn, "UPDATE APPLICANT SET ADDRESS_ID=?, FIRST_NAME=?, LAST_NAME=?, PREFERRED_NAME=?, DOB=?, PHONE_AREA_CODE=?, PHONE_LAST_SEVEN=?, US_CITIZEN=?, NATIVE_LANGUAGE=?, GENDER=?, HISP_LATINO=? WHERE APPLICANT_ID= " . $existingId . ";");
 
     mysqli_stmt_bind_param($applicantInsert, "issssssssss", $row[0], $firstname, $lastname, $preferredname, $birthday, $phoneArea, $phoneSeven, $isUSCitizen, $isEnglish, $gender, $isHispanic);
 
@@ -105,7 +105,7 @@
     mysqli_stmt_close($militaryStatusInsert);
 
   } else {
-    echo "YOU DOn't already exist";
+    echo "YOU Don't already exist";
     $addressSQL = mysqli_prepare($conn, "INSERT INTO ADDRESS (LINE_1, LINE_2, CITY, STATE_ID, ZIP_CODE, COUNTRY_ID) VALUES (?, ?, ?, ?, ?, ?);");
 
     mysqli_stmt_bind_param($addressSQL, "ssssss", $street1, $street2, $city, $state, $zip, $country);
@@ -121,7 +121,7 @@
     include 'disconnect.php';
     include 'connect_php.php';
 
-    $applicantInsert = mysqli_prepare($conn, "INSERT INTO APPLICANT (EMAIL, ADDRESS_ID, FIRST_NAME, LAST_NAME, PREFERRED_NAME, DOB, PHONE_AREA_CODE, PHONE_LAST_SEVEN, US_CITIZEN, NATIVE_LANGUAGE, GENDER_ID, HISP_LATINO) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);");
+    $applicantInsert = mysqli_prepare($conn, "INSERT INTO APPLICANT (EMAIL, ADDRESS_ID, FIRST_NAME, LAST_NAME, PREFERRED_NAME, DOB, PHONE_AREA_CODE, PHONE_LAST_SEVEN, US_CITIZEN, NATIVE_LANGUAGE, GENDER, HISP_LATINO) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);");
 
     mysqli_stmt_bind_param($applicantInsert, "sissssssssss", $useremail, $createdId, $firstname, $lastname, $preferredname, $birthday, $phoneArea, $phoneSeven, $isUSCitizen, $isEnglish, $gender, $isHispanic);
 

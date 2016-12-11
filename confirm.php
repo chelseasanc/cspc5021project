@@ -18,14 +18,11 @@
    <body>
       <h3>Please review and confirm your application.</h3>
       <div>
-        <h4>Appplication</h4>
         <?php include 'newapp_table.php';?>
         <br>
-        <h4>Personal Info</h4>
-        <?php include 'newapp_table.php';?>
+        <?php include 'applicant_table.php';?>
         <br>
-        <h4>Application Details</h4>
-        <?php include 'newapp_table.php';?>
+        <?php include 'appinfo_table.php';?>
         <br>
         <a href="./thanks.html"><button>Submit Application</button></a>
       </div>
