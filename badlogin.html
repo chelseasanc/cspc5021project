@@ -13,14 +13,18 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
-    <title>Your Applications</title>
+    <title>Log in</title>
   </head>
-   <body>
-      <h3>Welcome <?php session_start(); $useremail = $_SESSION['username']; echo $useremail; ?> </h3>
-      <div>
-        <h4> Here are your current applications: </h4>
-        <?php include 'apps_table.php';?>
-        <a href="./newapp.php"><button>Create new app</button></a>
-      </div>
-   </body>
+  <body>
+    <h3> Oops!</h3>
+    <div>
+      <h4> We don't have an account with those credentials. Please try again, or create a new account.</h4>
+      <br>
+      <a href="login.html"><button>Log In</button></a>
+      <br>
+      <br>
+      <br>
+      <a href="create_account.html"><button>Create New Account</button></a>
+    </div>
+  </body>
 </html>

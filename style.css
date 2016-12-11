@@ -14,20 +14,24 @@ div {
 /*table stying*/
 
 table {
-  border-color: #bbbbbb;
-  border-width: 1px;
   background-color: white;
   width: 100%;
   margin-bottom: 20px;
+  border: 1px solid black;
 }
 
-tr {
-  height: 30px;
+table.confirm {
+  table-layout: fixed;
 }
+
 
 thead {
   background-color: #990000;
   color: white;
+}
+
+thead tr {
+  height: 40px;
 }
 
 tbody tr:nth-child(even) {
@@ -40,6 +44,10 @@ tbody {
 
 td {
   padding: 5px;
+}
+
+td.confirm {
+  width: 50%;
 }
 
 
@@ -73,4 +81,5 @@ input[type=submit], button {
   border: none;
   width: 300px;
   height: 40px;
+  font-size: 16px;
 }

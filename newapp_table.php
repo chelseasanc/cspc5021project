@@ -10,7 +10,7 @@
 
   if (mysqli_num_rows($result) > 0) {
       $row = mysqli_fetch_row($result);
-      echo "<table>\n";
+      echo "<table class='confirm'>\n";
       echo "<thead> <td colspan='2'> Application </td> </thead>\n";
       echo "<tr>\n";
       echo "<td> What type of student are you? </td> \n";

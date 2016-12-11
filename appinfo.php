@@ -18,7 +18,7 @@
 
     </head>
     <body>
-      <h3>Please provide some more information about your application.</h3>
+      <h3>Application Details</h3>
       <div>
         <form method="POST" action="appinfo_create.php">
           <p>Will you be applying for financial aid? <br>
