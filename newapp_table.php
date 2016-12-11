@@ -25,8 +25,8 @@
       echo "<tr>\n";
       echo "<td> Which college are you applying to? </td> \n";
       echo "<td>" . $collegeName . "</td>\n";
-      echo "</tr>"
-      ;echo "<tr>\n";
+      echo "</tr>";
+      echo "<tr>\n";
       echo "<td> What type of degree are you applying for? </td> \n";
       echo "<td>" . $degreeType . "</td>\n";
       echo "</tr>\n";
@@ -37,7 +37,6 @@
       echo "<td> Please select the term you are aplying for. </td> \n";
       echo "<td>" . $quarter . " " . $year . "</td>\n";
       echo "</tr>\n";
->>>>>>> master
     echo "</table>\n";
   } else {
     echo $_SESSION['username'] . " doesn't have any apps at this time";
