@@ -11,7 +11,7 @@ Project for Database Systems http://catalog.seattleu.edu/preview_program.php?cat
 2. Each new record in the "APPLICATION" table is added after the "appinfo" page, but before the "confirm" page. This was intentional, since it would make it possible to create applications without submitting them so they could be edited later on. To build this out in the future, the "Submit" button on the "confirm" page might trigger the addition of the application ID to another table tracking submitted applications and their status. 
 
 
-Alterations to SQL database:
+##Alterations to SQL database (database_init.sql):
 - Altered "INSERT" statements for the "MAJOR" table so they inserted values in the right order
 - Extended the lenth of "MAJOR_NAME" column in the "MAJOR" table to fit the full names of majors
 - Fixed typos in the data for "MAJOR", "SCHOOL", and "DEGREE_TYPE INSERT"
