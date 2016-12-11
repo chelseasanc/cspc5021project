@@ -47,6 +47,10 @@
     sqlFail();
   }
 
+  $last_id = mysqli_insert_id($conn);
+  $_SESSION['application_id'] = $last_id;
+  echo $last_id;
+
   mysqli_stmt_close($sql);
 
   header("Location: ./confirm.php");
