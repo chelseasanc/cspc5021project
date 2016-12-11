@@ -18,6 +18,7 @@
   </head>
   <body>
     <h3>New Application</h3>
+    <h4>Please tell us about the program you are applying for. </h4>
     <div>
     <form method="POST" action="newapp_create.php">
       <p>
