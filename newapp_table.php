@@ -37,6 +37,7 @@
       echo "<td> Please select the term you are aplying for. </td> \n";
       echo "<td>" . $quarter . " " . $year . "</td>\n";
       echo "</tr>\n";
+>>>>>>> master
     echo "</table>\n";
   } else {
     echo $_SESSION['username'] . " doesn't have any apps at this time";

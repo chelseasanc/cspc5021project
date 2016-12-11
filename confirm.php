@@ -16,11 +16,19 @@
     <title>Confirm application</title>
   </head>
    <body>
-      <h3>Please review and confirm your application.</h3>
+      <?php session_start(); echo "<h3>Please review and confirm your application " .   $_SESSION['username'] . ".</h3>" ?>
       <div>
+<<<<<<< modify_confirm-page
+        <h4>Appplication</h4>
+        <?php include 'apps_table.php';?>
+        <br>
+        <h4>Personal Info</h4>
+        <?php include 'show_personal_info.php';?>
+=======
         <?php include 'newapp_table.php';?>
         <br>
         <?php include 'applicant_table.php';?>
+>>>>>>> master
         <br>
         <?php include 'appinfo_table.php';?>
         <br>
