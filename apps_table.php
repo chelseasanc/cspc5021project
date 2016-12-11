@@ -16,6 +16,7 @@
         echo "<td>Degree</td>\n";
         echo "<td>Major</td>\n";
         echo "<td>Term</td>\n";
+        echo "<td></td>\n";
       echo "</thead>\n";
       echo "<tbody>\n";
         while (mysqli_stmt_fetch($sql)) {
@@ -26,6 +27,7 @@
           echo "<td>" . $degreeType . "</td>\n";
           echo "<td>" . $termQtr . "</td>\n";
           echo "<td>" . $termYr . "</td>\n";
+          echo "<td> <a href='./confirm.php?app=". $appId . "'>View App</a></td>\n";
           echo "</tr>\n";
         }
       echo "</tbody>\n";
