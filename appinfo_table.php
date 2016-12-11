@@ -2,16 +2,20 @@
   session_start();
   include 'connect_php.php';
 
-  $application_id = $_SESSION['application_id'];
+  if($_GET['app']) {
+    $application_id = $_GET['app'];
+  } else {
+    $application_id = $_SESSION['application_id'];
+  }
 
   $sql = mysqli_prepare($conn, "SELECT FINANCIAL_AID, EMP_TUITION_ASSISTANCE, OTHER_PROGRAMS, FELON_MISDEMEAN, ACADEMIC_PROBATION FROM APPLICATION WHERE APP_ID= ? ");
-  mysqli_stmt_bind_param($sql, 'i', $_SESSION['application_id']);
-  $result = mysqli_stmt_execute($sql);
+  mysqli_stmt_bind_param($sql, 'i', $application_id);
+  $results = mysqli_stmt_execute($sql);
   mysqli_stmt_bind_result($sql,$finAid,$empTuition,$otherPrograms,$felonMisdemean,$academicProb);
   mysqli_stmt_fetch($sql);
   mysqli_stmt_close($sql);
 
-  if ($result) {
+  if ($results) {
       echo "<table class='confirm'>\n";
       echo "<thead> <td colspan='2'>Application Details </td> </thead>\n";
       echo "<tr>\n";

@@ -18,12 +18,12 @@
 
   $sql = mysqli_prepare($conn, "SELECT FIRST_NAME,LAST_NAME,PREFERRED_NAME,DOB,PHONE_AREA_CODE,PHONE_LAST_SEVEN,US_CITIZEN,NATIVE_LANGUAGE,GENDER,HISP_LATINO,LINE_1,LINE_2,CITY,STATE_NAME,ZIP_CODE,COUNTRY_NAME,STATUS_NAME,BRANCH_NAME FROM APPLICANT A, ADDRESS AD, MILITARY_STATUS M, MIL_STATUS_TYPE MS, MIL_BRANCH_TYPE MB, STATE S, COUNTRY C WHERE  A.ADDRESS_ID = AD.ADDRESS_ID AND  AD.STATE_ID = S.STATE_ID AND AD.COUNTRY_ID = C.COUNTRY_ID AND A.APPLICANT_ID = M.APPLICANT_ID AND M.STATUS_CODE = MS.STATUS_CODE AND M.BRANCH_CODE = MB.BRANCH_CODE AND A.EMAIL = ? ");
   mysqli_stmt_bind_param($sql, 's',  $username = $_SESSION['username']);
-  $result = mysqli_stmt_execute($sql);
+  $results = mysqli_stmt_execute($sql);
   mysqli_stmt_bind_result($sql,$firstName,$lastName,$preferredName,$dob,$phoneArea,$phoneNumber,$usCitizen,$nativeEng,$gender,$hispanic,$addr1,$addr2,$city,$state,$zip,$country,$milStatus,$milBranch);
   mysqli_stmt_fetch($sql);
   mysqli_stmt_close($sql);
 
-  if ($result) {
+  if ($results) {
       echo "<table class='confirm'>\n";
       echo "<thead> <td colspan='2'> Personal Information </td> </thead>\n";
       echo "<tr>\n";
