@@ -5,47 +5,48 @@ body {
 }
 
 div {
-  width: 100%;
   background-color: #f2f2f2;
   padding: 40px;
   border-radius: 5px;
 }
 
 /*table stying*/
-table, th, td {
-  border: solid black 1px;
-}
 
 table {
-  /*border-color: #000;
-  border-width: 1px;
-  border-style: solid;
-  or, of course,
-  border: 1px solid #000;
-  */
   background-color: white;
   width: 100%;
   margin-bottom: 20px;
-  border: none;
+  border: 1px solid black;
 }
 
-tr {
-  heigh: 30px;
+table.confirm {
+  table-layout: fixed;
 }
+
 
 thead {
   background-color: #990000;
   color: white;
 }
 
+thead tr {
+  height: 40px;
+}
 
 tbody tr:nth-child(even) {
   background-color: #f2f2f2;
 }
 
+tbody {
+  width: 50%;
+}
+
 td {
   padding: 5px;
-  border: none;
+}
+
+td.confirm {
+  width: 50%;
 }
 
 
@@ -79,4 +80,5 @@ input[type=submit], button {
   border: none;
   width: 300px;
   height: 40px;
+  font-size: 16px;
 }

@@ -17,7 +17,7 @@
   </head>
    <body>
       <h3>Welcome <?php session_start(); $useremail = $_SESSION['username']; echo $useremail; ?> </h3>
-      <h4> Here are your current applications: </h4>
+      <h4> Here are your submitted applications: </h4>
       <div>
         <?php include 'apps_table.php';?>
         <a href="./newapp.php"><button>Create new app</button></a>

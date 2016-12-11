@@ -18,14 +18,19 @@
    <body>
       <?php session_start(); echo "<h3>Please review and confirm your application " .   $_SESSION['username'] . ".</h3>" ?>
       <div>
+<<<<<<< modify_confirm-page
         <h4>Appplication</h4>
         <?php include 'apps_table.php';?>
         <br>
         <h4>Personal Info</h4>
         <?php include 'show_personal_info.php';?>
-        <br>
-        <h4>Application Details</h4>
+=======
         <?php include 'newapp_table.php';?>
+        <br>
+        <?php include 'applicant_table.php';?>
+>>>>>>> master
+        <br>
+        <?php include 'appinfo_table.php';?>
         <br>
         <a href="./thanks.html"><button>Submit Application</button></a>
       </div>

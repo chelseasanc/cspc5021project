@@ -2,26 +2,42 @@
   session_start();
   include 'connect_php.php';
 
+  if($_GET['app']) {
+    $application_id = $_GET['app'];
+  } else {
+    $application_id = $_SESSION['application_id'];
+  }
 
-  $sql = mysqli_prepare($conn, "SELECT APP_ID, ST.STUDENT_TYPE_NAME, CO.COLLEGE_NAME, DG.DEGREE_TYPE_NAME, TM.QUARTER, TM.YEAR FROM APPLICATION A JOIN APPLICANT APP ON A.APPLICANT_ID = APP.APPLICANT_ID JOIN STUDENT_TYPE ST ON A.STUDENT_TYPE_ID = ST.STUDENT_TYPE_ID JOIN MAJOR M ON M.MAJOR_ID = A.MAJOR_ID JOIN COLLEGE CO ON CO.COLLEGE_ID = M.COLLEGE_ID JOIN DEGREE_TYPE DG ON DG.DEGREE_TYPE_ID = A.DEGREE_TYPE_ID JOIN TERM TM ON TM.TERM_ID = A.TERM_ID WHERE APP.EMAIL = ?");
-  echo $_SESSION['username'];
-  mysqli_stmt_bind_param($sql, "s", $_SESSION['username']);
-  $results = mysqli_stmt_execute($sql);
-  mysqli_stmt_bind_result($sql, $appId, $majorId, $studentType, $degreeType, $termQtr, $termYr);
+  $stmt = mysqli_prepare($conn, "SELECT STUDENT_TYPE_NAME, COLLEGE_NAME, DEGREE_TYPE_NAME, MAJOR_NAME, QUARTER, YEAR FROM APPLICATION A, STUDENT_TYPE S, MAJOR M, COLLEGE C, DEGREE_TYPE D, TERM T WHERE A.STUDENT_TYPE_ID = S.STUDENT_TYPE_ID AND M.MAJOR_ID = A.MAJOR_ID AND C.COLLEGE_ID = M.COLLEGE_ID AND D.DEGREE_TYPE_ID = A.DEGREE_TYPE_ID AND T.TERM_ID = A.TERM_ID AND A.APP_ID = ? ");
+  mysqli_stmt_bind_param($stmt, 'i', $application_id);
+  $results = mysqli_stmt_execute($stmt);
+  mysqli_stmt_bind_result($stmt,$studentType,$collegeName,$degreeType,$majorName,$quarter,$year);
+  mysqli_stmt_fetch($stmt);
+  mysqli_stmt_close($stmt);
 
-  if (mysqli_num_rows($results)) {
-    echo "<table>\n";
-          while ($row = mysqli_stmt_fetch_rows($sql)) {
-          echo "<tr>\n";
-          echo "<td>" . $appId . "</td>\n";
-          echo "<td>" . $majorId . "</td>\n";
-          echo "<td>" . $studentType . "</td>\n";
-          echo "<td>" . $degreeType . "</td>\n";
-          echo "<td>" . $termQtr . "</td>\n";
-          echo "<td>" . $termYr . "</td>\n";
-          echo "</tr>\n";
-        }
-      echo "</tbody>\n";
+  if ($results) {
+      echo "<table class='confirm'>\n";
+      echo "<thead> <td colspan='2'> Application </td> </thead>\n";
+      echo "<tr>\n";
+      echo "<td> What type of student are you? </td> \n";
+      echo "<td>" . $studentType . "</td>\n";
+      echo "</tr>\n";
+      echo "<tr>\n";
+      echo "<td> Which college are you applying to? </td> \n";
+      echo "<td>" . $collegeName . "</td>\n";
+      echo "</tr>"
+      ;echo "<tr>\n";
+      echo "<td> What type of degree are you applying for? </td> \n";
+      echo "<td>" . $degreeType . "</td>\n";
+      echo "</tr>\n";
+      echo "<tr>\n";
+      echo "<td> Please select the major you are applying to. </td> \n";
+      echo "<td>" . $majorName. "</td>\n";
+      echo "</tr>";echo "<tr>\n";
+      echo "<td> Please select the term you are aplying for. </td> \n";
+      echo "<td>" . $quarter . " " . $year . "</td>\n";
+      echo "</tr>\n";
+>>>>>>> master
     echo "</table>\n";
   } else {
     echo $_SESSION['username'] . " doesn't have any apps at this time";
