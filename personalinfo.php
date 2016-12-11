@@ -21,6 +21,7 @@
     <body>
       <h3>Personal Information</h3>
       <div>
+      <h4>If you have already submitted an application, this will update the personal information we have on file.</h4>
       <form method="POST" action="personalinfo_create.php">
         <p>
           <label for='first-name'>First Name:</label><br>
