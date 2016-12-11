@@ -27,7 +27,7 @@
           echo "<td>" . $degreeType . "</td>\n";
           echo "<td>" . $termQtr . "</td>\n";
           echo "<td>" . $termYr . "</td>\n";
-          echo "<td> <a href='./confirm.php?app=". $appId . "'>View App</a></td>\n";
+          echo "<td> <a href='./confirm.php?app=". $appId . "'>View Application</a></td>\n";
           echo "</tr>\n";
         }
       echo "</tbody>\n";
